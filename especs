@@ -1,0 +1,16 @@
+*ESPECS
+
+1 - The API listens on a PORT and acceptd incoming HTTP requests for POST, GET, PUT, DELETE and HEAD (PATCH?)
+
+2 -The API allow a client to connect, then create a new user, then edit and delete that user.
+
+3 - The API allows a user to "sign in" which gives the a token that they can use for subsequent authenticated requests.
+
+4 - The API allows a user to "sign out"  which invalidates their token.
+
+5 - The API allows a signed-in user to use their token to create a new "check".
+
+6 - The API allows a signed-in user to edit or delete any of their checks.
+
+7 - In the background, worker perform all the "checks" at the appropriate times, and sen alert to the users when a check changes its state "up" to "down", os visa versa.
+
