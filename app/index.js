@@ -18,6 +18,9 @@ var parsedUrl = url.parse(req.url, true);
 var path = parsedUrl.pathname,
 	trimmedpath = path.replace(/^\/+|\/+$/g, '');
 
+// Get the query string as a object
+var queryStringObject = parsedUrl.query;
+
 // Get de HTTP method
 var method = req.method.toLowerCase();
 
@@ -25,7 +28,7 @@ var method = req.method.toLowerCase();
 	res.end('Hello\n');
 
 // Log the request path
-console.log('Request received on path: ' + trimmedpath + ' with the method: ' + method);
+console.log('Request received on path: ' + trimmedpath + ' with the method: ' + method + ' with these query string params: ', queryStringObject);
 
 });
 
