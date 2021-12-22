@@ -18,12 +18,14 @@ var parsedUrl = url.parse(req.url, true);
 var path = parsedUrl.pathname,
 	trimmedpath = path.replace(/^\/+|\/+$/g, '');
 
+// Get de HTTP method
+var method = req.method.toLowerCase();
 
 // Send the response
 	res.end('Hello\n');
 
 // Log the request path
-console.log('Request received on path: ' + trimmedpath);
+console.log('Request received on path: ' + trimmedpath + ' with the method: ' + method);
 
 });
 
